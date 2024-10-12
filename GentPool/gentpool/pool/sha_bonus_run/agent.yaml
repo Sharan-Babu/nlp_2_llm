@@ -1,0 +1,16 @@
+name: sha_bonus_run
+type: openai
+version: 0.0.1
+description: You can find different statitics about text
+target_tasks: 
+  - find statistics about text
+prompt_template: !prompt VanillaPrompt
+llm: 
+  model_name: gpt-4o-mini
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: text_analyzer
